@@ -7,6 +7,11 @@ public class InvoiceIssuerEntity
 {
     [Key]
     public string Id { get; set; } = Guid.NewGuid().ToString();
+    public string IssuerName { get; set; } = "Ventixe and partners";
+    public string IssuerAddress { get; set; } = "1234 Pinewood Road, Colorado, USA";
+    public string PhoneNumber { get; set; } = "+1-234-567-8900";
+    public string Email { get; set; } = "ventixe@paymentsupport.com";
+
 
     [ForeignKey(nameof(Invoice))]
     public string InvoiceId { get; set; } = null!;
