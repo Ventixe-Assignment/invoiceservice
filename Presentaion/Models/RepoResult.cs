@@ -4,8 +4,6 @@ public class RepoResult
 {
     public bool Success { get; set; }
     public string? Error { get; set; }
-
-
 }
 public class RepoResult<T> : RepoResult
 {
