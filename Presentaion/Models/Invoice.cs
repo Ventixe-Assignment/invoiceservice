@@ -10,8 +10,8 @@ public class Invoice
     public string Currency { get; set; } = null!;
     public string? Status { get; set; }
 
-    public string? IssuerName { get; set; } 
-    public string? IssuerAddress { get; set; } 
-    public string? IssuerPhoneNumber { get; set; } 
-    public string? IssuerEmail { get; set; } 
+    public string IssuerName { get; set; } = "Ventixe and partners";
+    public string IssuerAddress { get; set; } = "1234 Pinewood Road, Colorado, USA";
+    public string IssuerPhoneNumber { get; set; } = "+1-234-567-8900";
+    public string IssuerEmail { get; set; } = "ventixe@paymentsupport.com";
 }
