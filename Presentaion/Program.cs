@@ -12,7 +12,6 @@ builder.Configuration.AddAzureKeyVault(keyVaultEndpoint, new DefaultAzureCredent
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
-
 builder.Services.AddDbContext<InvoiceDataContext>(opt => opt.UseSqlServer(builder.Configuration["SqlConnection"]));
 builder.Services.AddScoped<IInvoiceRepository, InvoiceRepository>();
 builder.Services.AddScoped<IInvoiceService, InvoiceService>();
