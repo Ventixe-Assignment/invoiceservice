@@ -3,8 +3,12 @@ using Presentaion.Data.Contexts;
 using Presentaion.Data.Repositories;
 using Presentaion.Interfaces;
 using Presentaion.Services;
+using Azure.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var keyVaultEndpoint = new Uri(Environment.GetEnvironmentVariable("VaultUri")!);
+builder.Configuration.AddAzureKeyVault(keyVaultEndpoint, new DefaultAzureCredential());
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
