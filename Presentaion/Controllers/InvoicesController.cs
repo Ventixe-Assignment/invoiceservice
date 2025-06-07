@@ -45,7 +45,7 @@ public class InvoicesController(IInvoiceService invoiceService) : ControllerBase
             : NotFound(result.Error);
     }
 
-    [HttpPatch("{id}/status")]
+    [HttpPatch("status/{id}")]
     public async Task<IActionResult> UpdateInvoiceStatus(string id, [FromBody] string newStatus)
     {
         if (string.IsNullOrWhiteSpace(newStatus))
